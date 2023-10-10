@@ -1,0 +1,57 @@
+.container1 {
+
+display: flex;
+flex-direction: column;
+align-items: center;
+background-color: aquamarine;
+width: auto;
+height: auto;
+}
+
+.mentorLogo {
+
+
+
+}
+
+
+.loginMentor {
+    
+
+    text-decoration: none;
+    color: black;
+    padding-left: 25%;
+    
+}
+
+.loginPadawan {
+    text-decoration: none;
+    color: black;
+    padding-right: 25%;
+    align-self: auto;
+
+}
+
+.aboutUs {
+    text-decoration: none;
+    color: black;
+}
+
+h1 {
+
+}
+
+.aboutUsDiv {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    
+
+}
+
+p {
+    align-self: center;
+
+}
