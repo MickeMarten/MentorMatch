@@ -1,34 +1,23 @@
-.container1 {
 
-display: flex;
-flex-direction: column;
-align-items: center;
-background-color: aquamarine;
-width: auto;
-height: auto;
+/* Main site */
+.container1 {
+    margin-left: 300px;
+    width: 300px;
 }
 
 .mentorLogo {
 
-
-
 }
 
-
 .loginMentor {
-    
-
     text-decoration: none;
     color: black;
-    padding-left: 25%;
     
 }
 
 .loginPadawan {
     text-decoration: none;
     color: black;
-    padding-right: 25%;
-    align-self: auto;
 
 }
 
@@ -37,21 +26,47 @@ height: auto;
     color: black;
 }
 
-h1 {
 
-}
 
+
+/* About us site */
 .aboutUsDiv {
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+    font-size: 20px;
+    margin: 2% 2% 2% 2%;
+    padding: 20px 20px 20px 20px
     
 
 }
 
+/* Login pages */
+
+
+
+
+
+
+.loginPageDiv {
+    
+    font-size: 100%;
+    padding: 20%;
+    
+    
+    
+}
+
+input {
+font:inherit
+}
+
 p {
-    align-self: center;
+
+text-align: justify;
+text-indent: 0px;
+line-height: 110%;
+letter-spacing: 1px;
+word-spacing: 0px;
+font-weight:normal;
+
+
 
 }
