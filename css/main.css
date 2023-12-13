@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-size: 14px;
+}
+
+header {
+  background-color: rgb(73, 77, 124);
+  color: whitesmoke;
+  min-height: 12em;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+header h1 {
+  font-size: 3em;
+}
+header h2 {
+  font-size: 1em;
+}
+header ul {
+  margin: 2em 3em 0em 0em;
+  display: flex;
+  gap: 0.5em;
+}
+
+main section {
+  background: rgb(73, 77, 124);
+  background: linear-gradient(339deg, rgb(73, 77, 124) 45%, rgb(243, 249, 243) 45%);
+  height: 15em;
+}
+
+/*# sourceMappingURL=main.css.map */

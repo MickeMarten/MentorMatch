@@ -1,0 +1,39 @@
+//Variabels
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 14px;
+        
+}
+header {
+    background-color: rgb(73, 77, 124);
+    color: whitesmoke;
+    min-height: 12em;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    h1 {
+        font-size: 3em;
+    }
+
+    h2{
+        font-size: 1em;
+    }
+
+    ul{ 
+        margin: 2em 3em 0em 0em;
+        display: flex;
+        gap: 0.5em;
+    }
+}
+
+main {
+
+    section {
+        background: rgb(73,77,124);
+        background: linear-gradient(339deg, rgba(73,77,124,1) 45%, rgba(243,249,243,1) 45%);
+        height: 15em;
+    }
+}
+
