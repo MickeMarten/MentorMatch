@@ -23,8 +23,13 @@ header {
 
     ul{ 
         margin: 2em 3em 0em 0em;
+        list-style: none;
         display: flex;
         gap: 0.5em;
+        li{
+            font-size: 0.5em;
+            
+        }
     }
 }
 
@@ -32,7 +37,7 @@ main {
 
     section {
         background: rgb(73,77,124);
-        background: linear-gradient(339deg, rgba(73,77,124,1) 45%, rgba(243,249,243,1) 45%);
+        background: linear-gradient(336deg, rgba(73,77,124,1) 48%, rgba(243,249,243,1) 48%);
         height: 15em;
     }
 }
