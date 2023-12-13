@@ -18,16 +18,16 @@ header {
     }
 
     h2{
-        font-size: 1em;
+        font-size: 1.5em;
     }
 
     ul{ 
-        margin: 2em 3em 0em 0em;
         list-style: none;
         display: flex;
+        margin-top: 2em;
         gap: 0.5em;
         li{
-            font-size: 0.5em;
+            font-size: 1em;
             
         }
     }
