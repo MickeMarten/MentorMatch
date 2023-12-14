@@ -5,33 +5,59 @@
 }
 
 header {
-  background-color: rgb(73, 77, 124);
+  background-color: #31394d;
   color: whitesmoke;
   min-height: 12em;
   display: flex;
   flex-flow: column;
   align-items: center;
+  padding: 0px 0px 50px 30px;
 }
 header h1 {
   font-size: 3em;
 }
 header h2 {
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
-header ul {
-  list-style: none;
-  display: flex;
-  margin-top: 2em;
-  gap: 0.5em;
-}
-header ul li {
-  font-size: 1em;
+header .header__lightbulb {
+  width: 100px;
+  height: 120px;
+  padding: 0px 0px 0px 10px;
+  align-self: start;
 }
 
+main nav {
+  background-color: #31394d;
+  height: 50px;
+  border-top: 1px solid whitesmoke;
+  border-bottom: 1px solid whitesmoke;
+  display: flex;
+  flex-flow: row;
+  justify-content: end;
+  align-items: center;
+  padding-right: 10px;
+}
 main section {
-  background: rgb(73, 77, 124);
-  background: linear-gradient(336deg, rgb(73, 77, 124) 48%, rgb(243, 249, 243) 48%);
-  height: 15em;
+  background-color: #31394d;
+  height: 100px;
+}
+
+footer {
+  background-color: #31394d;
+  height: 100px;
+  border-top: 1px solid whitesmoke;
+  display: flex;
+  justify-content: center;
+}
+footer ul {
+  display: flex;
+  flex-flow: row;
+  align-items: end;
+  gap: 3em;
+  list-style: none;
+}
+footer ul li {
+  font-size: 1em;
 }
 
 /*# sourceMappingURL=main.css.map */
