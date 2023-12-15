@@ -65,7 +65,7 @@ main .cardsSection {
 main .cardsSection .cardArticle__Card {
   border: 1px solid whitesmoke;
   background-color: red;
-  height: 22em;
+  min-height: 22em;
   width: 14em;
   display: flex;
   flex-flow: column;
@@ -85,6 +85,7 @@ main .cardsSection .card__ProfilePicture {
 }
 main .cardsSection .cardContainer__Text {
   font-size: 1em;
+  max-width: 10em;
 }
 
 footer {
