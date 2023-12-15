@@ -10,6 +10,7 @@ $base-color:#31394d;
 }
 
 header {
+    width: 100%;
     background-color: $base-color;
     color: whitesmoke;
     min-height: 12em;
@@ -38,6 +39,7 @@ header {
 
 main {
     nav {
+        width: 100%;
         background-color: $base-color;
         height: 50px;
         border-top: 1px solid whitesmoke;
@@ -50,36 +52,92 @@ main {
     }
 
     section {
+        width: 100%;
         background-color: $base-color;
         min-height: 300px;
         display: flex;
         flex-flow: column;
         align-items: center;
         p{  
-            margin-left: 100px;
-            font-size: 1.5em;
-            min-width: 400px;
-            min-height: 100px;
+            max-width: 15em;
+            font-size: 1.3em;
         }
+    }
+    
+    .cardsSection {
+        display: flex;
+        flex-flow: row;
+        overflow-x: scroll;
+        gap: 1em;
+        border-bottom: 1px solid white;
+        border-top: 1px solid white;
+        background-color: #31394d;
+        width: 100%;
+
+     
+
+       .cardArticle__Card {
+        border: 1px solid whitesmoke;
+        background-color: red;
+        height: 22em;
+        width: 14em;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        border-radius: 1em;
+        padding: 0.5em;
+
+       }
+
+       .cardCcontainer__image {
+        width: 10em;
+        height: 10em;
+
+       }
+
+       .card__ProfilePicture {
+        width: 10em;
+        height: 10em;
+        border-radius: 1em;
+
+       }
+       .cardContainer__ProfileName{
+        
+
+       }
+       small {
+       }
+
+       .cardContainer__Text{
+        font-size: 1em;
+
+       }
     }
 }
 
+
+
+
 footer {
+    width: 100%;
     background-color: $base-color;
-    height: 50px;
+    height: 30px;
     border-top: 1px solid whitesmoke;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     ul{ 
         display: flex;
         flex-flow: row;
         align-items: end;
-        gap: 3em;
+        gap: 2em;
         list-style: none;
         li{
             font-size: 1em;
             
         }
     }
+    
+    
+
 }
 
