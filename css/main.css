@@ -8,13 +8,8 @@
 
 header {
   width: 100%;
-  height: 13em;
+  height: 10em;
   background-color: #31394d;
-  color: whitesmoke;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  padding-top: 1em;
 }
 header h1 {
   font-size: 3em;
@@ -25,12 +20,9 @@ header h2 {
   margin-left: 2em;
 }
 header .header__lightbulb {
+  display: none;
   width: 60px;
   height: 80px;
-  align-self: start;
-  position: relative;
-  top: 5em;
-  left: 1em;
 }
 
 main nav {
@@ -62,43 +54,30 @@ main section a {
   position: relative;
   top: 6em;
 }
-main .cardsSection {
+main .cardContainer {
+  padding: 2em;
   display: flex;
   flex-flow: row;
   overflow-x: scroll;
-  gap: 1em;
-  border-bottom: 1px solid white;
-  border-top: 1px solid white;
-  background-color: #31394d;
-  width: 100%;
 }
-main .cardsSection .cardArticle__Card {
-  border: 1px solid whitesmoke;
+main .Section__cardContainer {
   background-color: red;
-  min-height: 22em;
-  min-width: 14em;
   display: flex;
   flex-flow: column;
   align-items: start;
+  justify-content: end;
   gap: 0.5em;
-  border-radius: 1em;
-  padding: 0.5em;
+  height: 15em;
+  min-width: 12em;
+  border: 1px solid white;
 }
-main .cardsSection .cardCcontainer__image {
-  width: 10em;
-  height: 10em;
-}
-main .cardsSection .card__ProfilePicture {
-  width: 10em;
-  height: 10em;
-  border-radius: 1em;
-}
-main .cardsSection small {
-  min-width: 11em;
-}
-main .cardsSection .cardContainer__Text {
+main .Section__cardContainer p {
   font-size: 1em;
+  padding: 0em;
+}
+main .Section__cardContainer .profilePicture {
   max-width: 10em;
+  max-height: 10em;
 }
 
 footer {
