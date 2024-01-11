@@ -48,9 +48,30 @@ class Render {
         }
     }
 
-    
-    
     Render.renderUsers();
+
+    class LoggIn {
+       
+       static testar(){
+       
+                const logInBtn = document.querySelector('.nav__span');
+                
+                logInBtn.addEventListener('click', ()=> {
+                const bookModal = document.createElement('div');
+                document.body.append(bookModal);
+                bookModal.classList.add('booking__modal')
+               
+            })
+        }
+        
+        
+      
+
+    }
+
+    LoggIn.testar();
+
+
 
     
 
