@@ -6,14 +6,8 @@ class ApiFetch {
         const response = await fetch (url)
         const users = await response.json();
         return users;
-
-       
-
     }
-
-
 }
-
 
 
 class Render {
@@ -50,19 +44,18 @@ class Render {
 
             cardContainer.classList.add('Section__cardContainer')
 
-            
-
-
-        });
-
-      
-        
-        
+            });
+        }
     }
 
+    
+    
+    Render.renderUsers();
 
-}
+    
+
+
 
 // // https://mocki.io/v1/d6cdabfa-c890-44c1-88cb-11ec56e3faf7
 
-Render.renderUsers();
+

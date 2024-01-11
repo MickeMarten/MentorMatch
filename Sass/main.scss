@@ -3,7 +3,7 @@ $base-color:#31394d;
 *{
     box-sizing: border-box;
     margin: 0;
-    font-size: 14px;
+    font-size: 100%;
     font-family: Arial, Helvetica, sans-serif;
     color: whitesmoke;
 }
@@ -30,9 +30,7 @@ header {
         display: none;
         width: 60px;
         height: 80px;
-        // position: relative;
-        // top: 5em;
-        // left: 1em;
+       
     }
 }
 
@@ -63,11 +61,26 @@ main {
             padding-left: 3em;
             font-size: 1.3em;
         }
+        .firstSection__LinkDiv {
+            border: 0.2em solid black;
+            background-color: aqua;
+            width: 15em;
+            height: 3em;
+            margin-top: 2em;
+            border-radius: 1em;
+            text-align: center;
 
-        a {
-            position: relative;
-            top: 6em;
+            strong {
+                line-height: 2.5em;
+                
+                
+
+            }
+
+
         }
+
+       
     }
     
     .cardContainer {
@@ -75,10 +88,11 @@ main {
         display: flex;
         flex-flow: row;
         overflow-x: scroll;
+        gap: 15px;
 
     }
    .Section__cardContainer {
-    background-color: red;
+    background-color: rgb(128, 51, 111);
     display: flex;
     flex-flow: column;
     align-items: start;
