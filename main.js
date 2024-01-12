@@ -71,7 +71,7 @@ class Render {
 
             const passWordInput = document.createElement('input')
             passWordInput.placeholder='Lösenord';
-            passWordInput.type='text';
+            passWordInput.type='password';
             bookModal.append(passWordInput);
 
             const sendBtn = document.createElement('button');
