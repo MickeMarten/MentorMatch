@@ -11,10 +11,11 @@ const userList = [];
 
 app.get('/userData', (req, res) => {
     res.json(userList);
+
 });
 
 
-app.post('/Userdata', (req, res) => {
+app.post('/userData', (req, res) => {
     const userData = req.body;
     console.log('Recived data:', userData);
     userList.push(userData);
@@ -22,7 +23,8 @@ app.post('/Userdata', (req, res) => {
 })
 
 
-app.listen(3080, () => {
+
+app.listen(3000, () => {
     console.log('Ready for instructions')
 })
 

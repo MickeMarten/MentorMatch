@@ -60,17 +60,45 @@ class Render {
 
             const fullNameInput = document.createElement('input')
             fullNameInput.type = 'text'
-            fullNameInput.placeholder = 'För- och efternamn'
+            fullNameInput.placeholder = 'För- och efternamn:'
             bookModal.appendChild(fullNameInput);
 
 
             const emailInput = document.createElement('input')
-            emailInput.type = 'text'
-            emailInput.placeholder = 'Email'
+            emailInput.type = 'email'
+            emailInput.placeholder = 'Email:'
             bookModal.append(emailInput);
 
+            const occupation = document.createElement('input')
+            occupation.type = 'text'
+            occupation.placeholder = 'Ditt yrke:'
+            bookModal.append(occupation);
+
+            const adeptRadio = document.createElement('input');
+            adeptRadio.type = 'radio';
+            adeptRadio.name = 'role';
+            bookModal.append(adeptRadio);
+            const adeptLabel = document.createElement('label');
+            adeptLabel.textContent = 'Adept';
+            adeptRadio.value = 'Adept'
+            bookModal.appendChild(adeptLabel);
+
+            const mentorRadio = document.createElement('input');
+            mentorRadio.type = 'radio';
+            mentorRadio.name = 'role';
+            bookModal.append(mentorRadio);
+            const mentorLabel = document.createElement('label');
+            mentorLabel.textContent = 'Mentor';
+            mentorRadio.value = 'Mentor'
+            bookModal.appendChild(mentorLabel);
+
+            const quote = document.createElement('input')
+            quote.type = 'text'
+            quote.placeholder = 'Favoritcitat?'
+            bookModal.append(quote);
+
             const passWordInput = document.createElement('input')
-            passWordInput.placeholder = 'Lösenord';
+            passWordInput.placeholder = 'Lösenord:';
             passWordInput.type = 'password';
             bookModal.append(passWordInput);
 
@@ -79,7 +107,7 @@ class Render {
             bookModal.append(sendBtn);
             sendBtn.classList.add('sendBtn');
 
-            const sendUserInfo = new HandleUserInfo(sendBtn, emailInput, fullNameInput, passWordInput);
+            const sendUserInfo = new HandleUserInfo(sendBtn, emailInput, fullNameInput, passWordInput, mentorRadio, adeptRadio, quote, occupation);
 
         })
     }
@@ -91,30 +119,53 @@ Render.CreateLogin();
 
 
 class HandleUserInfo {
-    constructor(sendBtn, emailInput, fullNameInput, passWordInput) {
+    constructor(sendBtn, emailInput, fullNameInput, passWordInput, mentorRadio, adeptRadio, qoute, occupation) {
+        this.mentorRadio = mentorRadio;
+        this.adeptRadio = adeptRadio;
+        this.qoute = qoute;
+        this.occupation = occupation;
         this.emailInput = emailInput;
         this.fullNameInput = fullNameInput;
         this.passWordInput = passWordInput;
         this.sendBtn = sendBtn;
         sendBtn.addEventListener('click', () => this.createUser())
+
+        // this.mentorRadio.addEventListener('change', () => this.handleRadioChange('Mentor'));
+        // this.adeptRadio.addEventListener('change', () => this.handleRadioChange('Adept'));
+
     }
+
+    // handleRadioChange(role) {
+    //     this.selectedRole = role;
+    // }
 
     async createUser() {
         const userEmailValue = this.emailInput.value;
         const fullNameValue = this.fullNameInput.value;
         const passwordValue = this.passWordInput.value;
-        console.log('Email:', userEmailValue);
+        const userQouteValue = this.qoute.value;
+        const userOccupationValue = this.occupation.value;
+        const mentorChoiceValue = this.mentorChoice;
+        const adeptChoiceValue = this.adeptChoice;
         console.log('Username:', fullNameValue);
+        console.log('Email:', userEmailValue);
+        console.log('Favoritcitat:', userQouteValue);
+        console.log('Yrke', userOccupationValue);
+        console.log('Roll', this.selectedRole);
         console.log('Password:', passwordValue);
+
 
         const userData = {
             name: fullNameValue,
             email: userEmailValue,
+            quote: userQouteValue,
+            occupation: userQouteValue,
+            role: this.selectedRole,
             password: passwordValue
 
         };
 
-        const response = await fetch('http://localhost:3080/userData', {
+        const response = await fetch('http://localhost:3000/userData', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -127,6 +178,7 @@ class HandleUserInfo {
 
     }
 }
+
 
 
 
