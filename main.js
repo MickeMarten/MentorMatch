@@ -130,23 +130,27 @@ class HandleUserInfo {
         this.sendBtn = sendBtn;
         sendBtn.addEventListener('click', () => this.createUser())
 
-        // this.mentorRadio.addEventListener('change', () => this.handleRadioChange('Mentor'));
-        // this.adeptRadio.addEventListener('change', () => this.handleRadioChange('Adept'));
+
 
     }
 
-    // handleRadioChange(role) {
-    //     this.selectedRole = role;
-    // }
+
+
 
     async createUser() {
+        if (this.mentorRadio.checked) {
+            this.selectedRole = 'Mentor'
+        } else if (this.adeptRadio.checked) {
+            this.selectedRole = 'Adept'
+        } else {
+            console.log('Välj en roll');
+        }
+
         const userEmailValue = this.emailInput.value;
         const fullNameValue = this.fullNameInput.value;
         const passwordValue = this.passWordInput.value;
         const userQouteValue = this.qoute.value;
         const userOccupationValue = this.occupation.value;
-        const mentorChoiceValue = this.mentorChoice;
-        const adeptChoiceValue = this.adeptChoice;
         console.log('Username:', fullNameValue);
         console.log('Email:', userEmailValue);
         console.log('Favoritcitat:', userQouteValue);
@@ -155,11 +159,13 @@ class HandleUserInfo {
         console.log('Password:', passwordValue);
 
 
+
+
         const userData = {
             name: fullNameValue,
             email: userEmailValue,
             quote: userQouteValue,
-            occupation: userQouteValue,
+            occupation: userOccupationValue,
             role: this.selectedRole,
             password: passwordValue
 
