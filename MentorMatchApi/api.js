@@ -1,3 +1,29 @@
 import express from 'express';
+import cors from 'cors';
+const app = express();
+app.use(cors())
+app.use(express.json())
 
-console.log(express);
+const userList = [];
+
+// // Funktion som svarar på get-req
+
+
+app.get('/userData', (req, res) => {
+    res.json(userList);
+});
+
+
+app.post('/Userdata', (req, res) => {
+    const userData = req.body;
+    console.log('Recived data:', userData);
+    userList.push(userData);
+
+})
+
+
+app.listen(3080, () => {
+    console.log('Ready for instructions')
+})
+
+
